@@ -1,0 +1,29 @@
+/* TELEFON UCHUN HAMBURGER */
+.humburger {
+    display: none;
+}
+.humburger + nav {
+    display: none;
+}
+.hum_menu,
+.hum_x {
+    display: inline-block; /* faqat telefon uchun */
+    cursor: pointer;
+}
+.hum_x {
+    display: none; /* X tugmasi default yashirin */
+}
+.humburger:checked + nav {
+    display: block;
+}
+header:has(.humburger:checked) .hum_menu {
+    display: none;
+}
+header:has(.humburger:checked) .hum_x {
+    display: inline-block;
+}
+header nav {
+    background: #e6ecff;
+    padding: 10px;
+    border-radius: 10px;
+}
